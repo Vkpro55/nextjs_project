@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import ResponsiveNavbar from "@/components/Home/Navbar/ResponsiveNavbar";
+import Provider from "@/components/Hoc/Provider";
 
 const font = Roboto({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  subsets: ['latin']
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -20,11 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${font.className} antialiased`}
-      >
-       <ResponsiveNavbar/>
-        {children}
+      <body className={`${font.className} antialiased`}>
+        <Provider>
+          <ResponsiveNavbar />
+          {children}
+        </Provider>
       </body>
     </html>
   );
