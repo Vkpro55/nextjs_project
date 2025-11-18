@@ -7,7 +7,11 @@ import { useEffect, useState } from "react";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { LuNetwork } from "react-icons/lu";
 
-export default function Navbar() {
+interface NavbarProps {
+  openNav: () => void;
+}
+
+export default function Navbar({ openNav }: NavbarProps) {
   const [navBg, setNavBg] = useState(false);
 
   useEffect(() => {
@@ -66,7 +70,7 @@ export default function Navbar() {
           {/* Theme Toggler */}
 
           {/* Burger Menu */}
-          <HiBars3BottomRight className="w-8 h-8 cursor-pointer text-black lg:hidden" />
+          <HiBars3BottomRight onClick={openNav} className="w-8 h-8 cursor-pointer text-black lg:hidden" />
         </div>
       </div>
     </div>
