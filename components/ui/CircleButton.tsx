@@ -5,7 +5,7 @@ type variantType = "primary";
 interface ButtonProps {
   variant?: variantType;
   themeHandler: () => void;
-  icon: JSX.Element
+  icon: () => JSX.Element
 }
 
 const baseStyles =
@@ -24,7 +24,7 @@ export default function Circlebutton({
       onClick={themeHandler}
       className={`${baseStyles} ${variants[variant]}`}
     >
-      {icon}
+      {icon()}
     </button>
   );
 }
