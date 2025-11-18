@@ -1,8 +1,11 @@
+import Home from "@/components/Home/Home";
 
-export default function page() {
+export default function HomePage() {
   return (
-    <div>
-      Homepage Nextjs
-    </div>
-  )
+    <>
+     <Home/>
+    </>
+  );
 }
+
+// http://localhost:3000
