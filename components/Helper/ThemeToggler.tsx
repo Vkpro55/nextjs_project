@@ -20,10 +20,6 @@ export default function ThemeToggler() {
 
   const currentTheme = theme === "system" ? systemTheme : theme;
 
-  const themeHandler = () => {
-    setTheme(currentTheme === "dark" ? "light" : "dark");
-  };
-
   const iconChanger = (): JSX.Element => {
     if (currentTheme === "dark") {
       return <BiSun className="text-white dark:text-black w-7 h-7" />;
@@ -32,5 +28,18 @@ export default function ThemeToggler() {
     }
   };
 
-  return <Circlebutton themeHandler={themeHandler} icon={iconChanger()} />;
+  return (
+    <Circlebutton
+      themeHandler={() => {
+        setTheme(currentTheme === "dark" ? "light" : "dark");
+      }}
+      icon={(): JSX.Element => {
+        if (currentTheme === "dark") {
+          return <BiSun className="text-white dark:text-black w-7 h-7" />;
+        } else {
+          return <BiMoon className="text-white dark:text-black w-7 h-7" />;
+        }
+      }}
+    />
+  );
 }
