@@ -1,3 +1,4 @@
+"use client"
 import SectionHeading from "@/components/Helper/SectionHeading";
 import { CategoryData } from "@/constant/constant";
 import CategoryCard from "./CategoryCard";

@@ -1,3 +1,4 @@
+"use client";
 
 import { IconType } from "react-icons";
 import Tilt from 'react-parallax-tilt';
@@ -12,5 +13,9 @@ category: {
 }
 
 export default function CategoryCard({category}: Props) {
-  return <Tilt></Tilt>
+  return <Tilt>
+    <div style={{ height: '300px', backgroundColor: 'darkgreen' }}>
+        <h1>React Parallax Tilt 👀</h1>
+      </div>
+  </Tilt>
 }
