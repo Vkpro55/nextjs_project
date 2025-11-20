@@ -6,7 +6,7 @@ export default function Hero() {
     <div className="w-full h-screen flex flex-col justify-center">
       <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10">
         {/* Text Content */}
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center" data-aos="fade-right">
           <h1 className="text-3xl sm:text-6xl font-bold">
             Join us & Explore Thousands of Jobs
           </h1>
@@ -34,7 +34,7 @@ export default function Hero() {
           />
         </div> */}
 
-        <div className="hidden xl:block">
+        <div className="hidden xl:block" data-aos="fade-left" data-aos-delay="150">
           <Image
             src="/images/hero.png"
             alt="hero-image"

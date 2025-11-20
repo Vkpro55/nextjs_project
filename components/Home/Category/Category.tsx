@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import SectionHeading from "@/components/Helper/SectionHeading";
 import { CategoryData } from "@/constant/constant";
 import CategoryCard from "./CategoryCard";
@@ -11,9 +11,14 @@ export default function Category() {
         subheading="2020 jobs live - 293 added today."
       />
       <div className="w-[80%] mx-auto mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {CategoryData.map((category) => {
+        {CategoryData.map((category, index) => {
           return (
-            <div key={category.id}>
+            <div
+              key={category.id}
+              data-aos="fade-right"
+              data-aos-anchor-placement="top-centre"
+              data-aos-delay={index * 100}
+            >
               <CategoryCard category={category} />
             </div>
           );
