@@ -1,4 +1,5 @@
 import Category from "./Category/Category";
+import Footer from "./Footer/Footer";
 import Hero from "./Hero/Hero";
 import Info from "./Info/Info";
 import Job from "./Job/Job";
@@ -16,6 +17,7 @@ export default function Home() {
      <Info/>
      <Price/>
      <Review/>
+     <Footer/>
     </div>
   )
 }

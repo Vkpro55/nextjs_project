@@ -206,3 +206,48 @@ export const jobs = [
   },
 ];
 
+export const FooterData = [
+  {
+    id: 1,
+    title: "For Candidates",
+    items: [
+      "Browse Jobs",
+      "Browse Categories",
+      "Candidate Dashboard",
+      "Job Alerts",
+      "My Bookmarks",
+    ],
+  },
+  {
+    id: 2,
+    title: "For Employers",
+    items: [
+      "Browse Candidates",
+      "Employer Dashboard",
+      "Add Job",
+      "Job Packages",
+    ],
+  },
+  {
+    id: 3,
+    title: "About Us",
+    items: [
+      "Job page",
+      "Job Page Alternative",
+      "Resume Page",
+      "Blog",
+      "Contact",
+    ],
+  },
+  {
+    id: 4,
+    title: "Helpful Resources",
+    items: [
+      "Site Map",
+      "Terms of Use",
+      "Privacy Center",
+      "Security Center",
+      "Accessibility Center",
+    ],
+  },
+];
