@@ -4,6 +4,8 @@ import "./globals.css";
 import ResponsiveNavbar from "@/components/Home/Navbar/ResponsiveNavbar";
 
 import Provider from "@/components/Hoc/Provider";
+import Footer from "@/components/Home/Footer/Footer";
+import ScrollToTop from "@/components/Helper/ScrollToTop";
 
 const font = Roboto({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -26,6 +28,8 @@ export default function RootLayout({
         <Provider>
           <ResponsiveNavbar />
           {children}
+          <Footer/>
+          <ScrollToTop/>
         </Provider>
       </body>
     </html>
