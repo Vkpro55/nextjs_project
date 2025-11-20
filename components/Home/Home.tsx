@@ -1,5 +1,6 @@
 import Category from "./Category/Category";
 import Hero from "./Hero/Hero";
+import Info from "./Info/Info";
 import Job from "./Job/Job";
 import TopCompany from "./TopCompany/TopCompany";
 
@@ -10,6 +11,7 @@ export default function Home() {
      <Category/>
      <Job/>
      <TopCompany/>
+     <Info/>
     </div>
   )
 }
