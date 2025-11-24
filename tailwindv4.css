@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+/*
+@layer base — For HTML element styling
+
+Browser resets
+
+Typography (headings, body font)
+
+Global element styles
+
+Very low priority
+
+Never write classes here — use element selectors
+*/
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-800;
+  }
+
+  h1 {
+    @apply font-bold text-4xl;
+  }
+}
+
+/*
+ @layer components — For reusable UI components
+
+Buttons
+
+Cards
+
+Navbars
+
+Alerts
+
+Modals
+
+Anything you want to reuse as a class
+*/
+@layer components {
+  .btn {
+    @apply px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700;
+  }
+
+  .card {
+    @apply p-6 rounded-xl shadow-sm border border-gray-200;
+  }
+}
+
+/*
+layer utilities — Create new tiny utilities
+
+These should be:
+
+Single-purpose
+
+Low-complexity
+
+Atomic
+
+Examples:
+
+.text-balance
+
+.rotate-y-180
+
+.scrollbar-hide
+*/
+@layer utilities {
+  .content-auto {
+    content-visibility: auto;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+
+  .shadow-heavy {
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  }
+}
+
+
+@theme {
+  /* Colors */
+  --color-primary: #0d6efd;
+  --color-success: #198754;
+  --color-danger: #dc3545;
+
+  /* Spacing */
+  --spacing-xxs: 2px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-xl: 16px;
+
+  /* Fonts */
+  --font-sans: ui-sans-serif, system-ui, "Inter", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+
+  /* Screens */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+
+  /* Transition durations */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+
+  /* Keyframes */
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+
+  /* Animations */
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+
+  /* Shadows */
+  --shadow-card: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+/* custom variant dark: */
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant active (&:active);
+/* <button class="bg-primary active:bg-blue-900"></button>
+ */
